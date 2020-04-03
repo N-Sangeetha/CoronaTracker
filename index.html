@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>CoronaTracker</title>
+  </head>
+  <body>
+    <nav id="main-nav">
+      <div class="container nav-bar">
+        <h1 class="logo">CoronaTracker</h1>
+        <select name="coronatrack" id="coronatrack">
+          <option value="1" selected>All</option>
+          <option value="2">India</option>
+          <option value="3">USA</option>
+        </select>
+      </div>
+    </nav>
+
+    <!-- box -->
+    <section id="total-boxes">
+      <div class="box-container">
+        <article class="card">
+          <h3>Total Confirmed</h3>
+          <p id="tconfirm">0</p>
+        </article>
+        <article class="card">
+          <h3>Total Recovered</h3>
+          <p id="trecover">0</p>
+        </article>
+        <article class="card">
+          <h3>Total Death</h3>
+          <p id="tdeaths">0</p>
+        </article>
+        <article class="card">
+          <h4>Recovery Rate : <span id="rerate">0</span></h4>
+          <h4>Death Rate : <span id="derate">0</span></h4>
+        </article>
+      </div>
+    </section>
+
+    <section id="statistics-content">
+      <div class="container statistics-container">
+        <h3><span id="statistic-name">Country</span>Statistics</h3>
+        <input
+          type="text"
+          name="country"
+          id="searchcountry"
+          placeholder="Search"
+        />
+        <div class="table-content">
+          <table>
+            <thead>
+              <tr>
+                <th id="statistic-name-th">
+                  Country
+                </th>
+                <th>
+                  Confirmed
+                </th>
+                <th>
+                  Recovered
+                </th>
+                <th>
+                  Dead
+                </th>
+              </tr>
+            </thead>
+            <tbody id="case-view"></tbody>
+          </table>
+          <p id="errmsg"></p>
+        </div>
+      </div>
+    </section>
+    <script src="js/corona.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

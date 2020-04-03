@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Merienda|Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6rem;
+  background-color: #273c75; /* #182c61 */
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Nav-bar */
+
+#main-nav .logo {
+  font-family: "Merienda", cursive;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+#main-nav .container {
+  max-width: 1100px;
+  padding: 2rem;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#coronatrack {
+  width: 40%;
+  height: 35px;
+  font-size: 1rem;
+  justify-self: end;
+  border-radius: 4px;
+}
+
+/* total count boxes */
+#total-boxes {
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 70px;
+}
+#total-boxes .box-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  align-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  /* background: #fff; */
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin: 0 30px;
+  box-shadow: 0 0 10px #000000; /* 5px 8px 6px -6px black; */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.card h4 {
+  font-size: 1.4rem;
+}
+
+.card h4:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+}
+
+.card #tconfirm {
+  color: #f97f51;
+}
+
+.card #trecover {
+  color: #20bf6b;
+}
+
+.card #tdeaths {
+  color: #b33939;
+}
+
+.card #rerate {
+  color: #01a3a4;
+}
+
+.card #derate {
+  color: #b33939;
+}
+
+.card #rerate,
+#derate {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+}
+
+/* statistics */
+
+#statistics-content {
+  margin-top: 40px;
+}
+
+.statistics-container {
+  max-width: 1200px;
+  padding: 2rem 3rem;
+  margin: auto;
+  box-shadow: 0 0 10px #000000;
+}
+
+.statistics-container h3 {
+  font-size: 2rem;
+}
+
+.table-content {
+  overflow-x: auto;
+}
+
+table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #000;
+  color: #ddd;
+}
+
+th {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+tr:hover {
+  background-color: #34477a;
+}
+
+#searchcountry {
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 40%;
+  height: 40px;
+  margin-top: 30px;
+  background: transparent;
+  font-size: 1rem;
+  color: #fff;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+#errmsg {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* media queries */
+
+@media (max-width: 786px) {
+  #total-boxes {
+    max-width: 600px;
+    margin: auto;
+  }
+  #total-boxes .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-bar {
+    grid-template-columns: 1fr;
+  }
+
+  #coronatrack {
+    margin-top: 20px;
+    justify-self: start;
+  }
+
+  .card #rerate {
+    line-height: 1.5;
+  }
+  .card h4:first-child {
+    margin-bottom: 0.7rem;
+  }
+
+  #searchcountry {
+    width: 70%;
+  }
+  .statistics-container {
+    margin: 0 20px;
+  }
+}
