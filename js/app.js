@@ -77,7 +77,7 @@ var returnedFunction = debounce(e => {
       }
     });
   } else {
-    getCases();
+    window.location.reload();
   }
 }, 500);
 
