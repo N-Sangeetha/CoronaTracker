@@ -25,7 +25,7 @@ class Corona {
         indiaData
       };
     } else {
-      const usaResponse = await fetch("https://corona.lmao.ninja/states");
+      const usaResponse = await fetch("https://corona.lmao.ninja/v2/states");
 
       const usaData = await usaResponse.json();
       return {
@@ -36,7 +36,7 @@ class Corona {
 
   async getCountry(country) {
     const counResponse = await fetch(
-      `https://corona.lmao.ninja/countries/${country}`
+      `https://corona.lmao.ninja/v2/countries/${country}`
     );
 
     const countryData = await counResponse.json();
