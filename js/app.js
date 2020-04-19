@@ -31,8 +31,8 @@ function getCases(e) {
   } else {
     corona
       .get(
-        "https://corona.lmao.ninja/countries",
-        "https://corona.lmao.ninja/all"
+        "https://corona.lmao.ninja/v2/countries",
+        "https://corona.lmao.ninja/v2/all"
       )
       .then(data => {
         ui.showCases(data.cases);
